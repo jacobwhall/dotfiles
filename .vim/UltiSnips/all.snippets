@@ -1,0 +1,53 @@
+snippet start "Start a standard LaTeX document"
+\documentclass[12pt]{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage[math-style=ISO]{unicode-math}
+\usepackage{siunitx}
+\usepackage{chemformula}
+
+\begin{document}
+
+\begin{flushleft}
+$1\\\\
+Jacob Hall\\\\
+$2\\\\
+Professor $3\\\\
+\today
+\end{flushleft}
+
+$0
+
+\end{document}
+endsnippet
+
+snippet beg "begin{} / end{}" bA
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
+endsnippet
+
+snippet dm "Math" wA
+\[
+$1
+.\] $0
+endsnippet
+
+snippet enum "Create enumerate list"
+\begin{enumerate}
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet

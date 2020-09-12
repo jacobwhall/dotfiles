@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/jacob/Documents/Classes/Environmental Geochemistry'
+let g:netrw_dirhist_8='/home/jacob/.config/systemd'
+let g:netrw_dirhist_7='/sys/devices/platform/dell-laptop/leds/dell::kbd_backlight'
+let g:netrw_dirhist_6='/home/jacob/Documents/wordways'
+let g:netrw_dirhist_5='/home/jacob/Documents'
+let g:netrw_dirhist_4='/home/jacob'
+let g:netrw_dirhist_3='/home/jacob/.vim'
+let g:netrw_dirhist_2='/home/jacob/.vim/colors'
+let g:netrw_dirhist_1='/home/jacob/.vim'
