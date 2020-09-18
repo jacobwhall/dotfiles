@@ -40,11 +40,11 @@ endsnippet
 
 snippet dm "Math" wA
 \[
-$1
+	$1
 .\] $0
 endsnippet
 
-snippet // "Fraction" iA
+snippet // "Fraction" wA
 \\frac{$1}{$2}$0
 endsnippet
 # End of Gilles' work
@@ -53,4 +53,27 @@ snippet enum "Create enumerate list"
 \begin{enumerate}
 	\item $1
 \end{enumerate}
+endsnippet
+
+snippet si "Insert unit" i
+\\si{\\$1}$0
+endsnippet
+
+snippet ch "Insert chemical formula" i
+\\ch{$1}$0
+endsnippet
+
+priority 1000
+snippet oct "octave block" w
+oct $1 oct$0
+endsnippet
+
+priority 10000
+snippet 'oct(.*)oct' "evaluate octave" wr
+`!p
+import subprocess
+code = 'disp(' + match.group(1) + ')'
+result = subprocess.run(['octave', '--eval', code], stdout=subprocess.PIPE)
+snip.rv = result.stdout.decode('utf-8').strip()
+`
 endsnippet
