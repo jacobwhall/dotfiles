@@ -45,6 +45,10 @@ colorscheme edge
 " Disable compatibility with vi
 set nocompatible
 
+" Only indent with tabs
+:autocmd FileType python setlocal noexpandtab
+:set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab 
+
 " Enable syntax highlighting
 syntax on
 
