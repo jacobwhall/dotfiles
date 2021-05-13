@@ -27,6 +27,19 @@ cd
 git clone --recurse-submodules https://github.com/jacobwhall/dotfiles
 ```
 
+### install zsh theme
+
+I use git submodules to keep various setups up-to-date, including my [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and a theme I use with it called [powerlevel10k](https://github.com/romkatv/powerlevel10k).
+Once the repository is cloned, run the following commands to symlink powerlevel10k into the oh-my-zsh custom themes folder:
+(You might need to edit these a bit depending on where you put things)
+```
+cd zsh/.oh-my-zsh/custom/themes
+ln -s ~/dotfiles/zsh\ themes/powerlevel10k
+cd ~/dotfiles
+```
+This only needs to be done once.
+I'm sure there's a nicer way of configuring this, but the current way is fine for now.
+
 ### stow configs
 
 Just run `stow [program]` to install that program's configuration files.
