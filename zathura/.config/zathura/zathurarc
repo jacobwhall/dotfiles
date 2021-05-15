@@ -1,1 +1,21 @@
+# set font to match my terminal
+set font "MesloLGS NF 16"
+
+# set background to match my vim colorscheme (edge)
+set default-bg "#30323A"
+set statusbar-bg "#30323A"
+set inputbar-bg "#30323A"
+set notification-error-bg "#30323A"
+
+# set statusbar and inputbar text to also match vim
+set statusbar-fg "#C5CDD9"
+set inputbar-fg "#C5CDD9"
+
+# if it's an error, make the text red!
+set notification-error-fg "#ec7279" 
+
+# default to fit width
 set adjust-open "best-fit"
+
+# use the right clipboard
+set selection-clipboard clipboard
