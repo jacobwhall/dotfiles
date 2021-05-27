@@ -46,7 +46,7 @@ colorscheme edge
 set nocompatible
 
 " Only indent with tabs
-:autocmd FileType python setlocal noexpandtab
+" :autocmd FileType python setlocal noexpandtab
 :set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab 
 
 " Enable syntax highlighting
