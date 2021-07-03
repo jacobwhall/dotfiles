@@ -1,8 +1,11 @@
+# aliases.zsh
+# set my aliases
+
+# i got used to just running `open` on MacOS
 alias open=xdg-open
 
-# is neovim installed on this computer?
-if command -v nvim &> /dev/null
-then
-	# if so, use neovim instead of vim
-	alias vi=nvim
-fi
+# if fdfind is installed
+(( $+commands[fdfind] )) && alias fd=fdfind
+
+# if neovim is installed
+(( $+commands[nvim] )) && alias vi=nvim
