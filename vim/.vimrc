@@ -1,9 +1,9 @@
-" Use edge color scheme: https://github.com/sainnhe/edge
-set termguicolors
-colorscheme edge
-"
+" Explicitly use dark background
+" this is important because tmux will default to light for some reason
+set background=dark
+
 " Use happy_hacking color scheme: https://github.com/yorickpeterse/happy_hacking.vim
-"colorscheme happy_hacking
+colorscheme happy_hacking
 
 " Disable compatibility with vi
 set nocompatible
@@ -21,6 +21,7 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
+let g:completer_python_binary = '/home/jacob/.miniconda3/bin/python'
 " Enable syntax highlighting
 syntax on
 
