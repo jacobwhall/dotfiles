@@ -16,12 +16,11 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
 
-let g:completer_python_binary = '/home/jacob/.miniconda3/bin/python'
+let g:completer_python_binary = system("which python")
 " Enable syntax highlighting
 syntax on
 
