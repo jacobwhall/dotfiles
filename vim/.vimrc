@@ -20,10 +20,6 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
-let g:completer_python_binary = system("which python")
-" Enable syntax highlighting
-syntax on
-
 " Use utf-8 encoding
 set encoding=utf-8
 
@@ -39,3 +35,12 @@ set relativenumber
 " Display title of file in GUI terminal
 set title
 set titlestring=%t%(\ %M%)%(\ (%F)%)%a
+
+" add lsp plugin
+packadd lsp
+
+let lspServers = [ #{ filetype: ['python'], path: '/home/jacob/.miniconda3/bin/jedi-language-server', args: [] } ]
+
+call LspOptionsSet({'autoHighlight': v:true, 'noNewlineInCompletion': v:true})
+
+call LspAddServer(lspServers)
