@@ -36,11 +36,18 @@ set relativenumber
 set title
 set titlestring=%t%(\ %M%)%(\ (%F)%)%a
 
+" use mouse mode
+" set mouse=n
+
+autocmd BufEnter *.py :syntax sync fromstart
+
 " add lsp plugin
 packadd lsp
 
-let lspServers = [ #{ filetype: ['python'], path: '/home/jacob/.miniconda3/bin/jedi-language-server', args: [] } ]
+call LspOptionsSet({'autoHighlight': v:true, 'noNewlineInCompletion': v:true, 'useTabInCompletion': v:true })
 
-call LspOptionsSet({'autoHighlight': v:true, 'noNewlineInCompletion': v:true})
+call LspAddServer([ #{ filetype: ['python'], path: '/home/jacob/.miniforge3/bin/pylsp', args: [] } ])
 
-call LspAddServer(lspServers)
+" rust-analyzer installed using `rustup component add rust-analyzer`
+call LspAddServer([ #{ name: 'rustlang', filetype: ['rust'], path: '/home/jacob/.cargo/bin/rust-analyzer', args: [], syncInit: v:true }])
+
